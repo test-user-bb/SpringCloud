@@ -1,0 +1,150 @@
+{
+  "groups": [
+    {
+      "name": "spring.cloud.config.server",
+      "type": "org.springframework.cloud.config.server.ConfigServerProperties",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties"
+    },
+    {
+      "name": "spring.cloud.config.server.git",
+      "type": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.health",
+      "type": "org.springframework.cloud.config.server.ConfigServerHealthIndicator",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerHealthIndicator"
+    },
+    {
+      "name": "spring.cloud.config.server.native",
+      "type": "org.springframework.cloud.config.server.NativeEnvironmentRepository",
+      "sourceType": "org.springframework.cloud.config.server.NativeEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.svn",
+      "type": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository",
+      "sourceType": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.cloud.config.server.bootstrap",
+      "type": "java.lang.Boolean",
+      "description": "Flag indicating that the config server should initialize its own Environment with\n properties from the remote repository. Off by default because it delays startup but\n can be useful when embedding the server in another application.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.cloud.config.server.default-application-name",
+      "type": "java.lang.String",
+      "description": "Default application name when incoming requests do not have a specific one.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties",
+      "defaultValue": "application"
+    },
+    {
+      "name": "spring.cloud.config.server.default-label",
+      "type": "java.lang.String",
+      "description": "Default repository label when incoming requests do not have a specific label.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties"
+    },
+    {
+      "name": "spring.cloud.config.server.default-profile",
+      "type": "java.lang.String",
+      "description": "Default application profile when incoming requests do not have a specific one.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties",
+      "defaultValue": "default"
+    },
+    {
+      "name": "spring.cloud.config.server.git.basedir",
+      "type": "java.io.File",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.git.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.git.repos",
+      "type": "java.util.Map<java.lang.String,org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository.PatternMatchingJGitEnvironmentRepository>",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.git.search-paths",
+      "type": "java.lang.String[]",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.git.uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.git.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.cloud.config.server.MultipleJGitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.health.repositories",
+      "type": "java.util.Map<java.lang.String,org.springframework.cloud.config.server.ConfigServerHealthIndicator.Repository>",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerHealthIndicator"
+    },
+    {
+      "name": "spring.cloud.config.server.native.fail-on-error",
+      "type": "java.lang.Boolean",
+      "description": "Flag to determine how to handle exceptions during decryption (default false).",
+      "sourceType": "org.springframework.cloud.config.server.NativeEnvironmentRepository",
+      "defaultValue": false
+    },
+    {
+      "name": "spring.cloud.config.server.native.search-locations",
+      "type": "java.lang.String[]",
+      "description": "Locations to search for configuration files. Defaults to the same as a Spring Boot\n app so [classpath:/,classpath:/config/,file:./,file:./config/].",
+      "sourceType": "org.springframework.cloud.config.server.NativeEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.overrides",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Extra map for a property source to be sent to all clients unconditionally.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties"
+    },
+    {
+      "name": "spring.cloud.config.server.prefix",
+      "type": "java.lang.String",
+      "description": "Prefix for configuration resource paths (default is empty). Useful when embedding\n in another application when you don't want to change the context path or servlet\n path.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties"
+    },
+    {
+      "name": "spring.cloud.config.server.strip-document-from-yaml",
+      "type": "java.lang.Boolean",
+      "description": "Flag to indicate that YAML documents that are text or collections (not a map)\n should be returned in \"native\" form.",
+      "sourceType": "org.springframework.cloud.config.server.ConfigServerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "spring.cloud.config.server.svn.basedir",
+      "type": "java.io.File",
+      "sourceType": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.svn.password",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.svn.search-paths",
+      "type": "java.lang.String[]",
+      "sourceType": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.svn.uri",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository"
+    },
+    {
+      "name": "spring.cloud.config.server.svn.username",
+      "type": "java.lang.String",
+      "sourceType": "org.springframework.cloud.config.server.SvnKitEnvironmentRepository"
+    }
+  ]
+}

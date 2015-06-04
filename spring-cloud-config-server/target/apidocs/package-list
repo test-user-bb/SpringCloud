@@ -1,0 +1,2 @@
+org.springframework.cloud.config.server
+org.springframework.cloud.config.server.encryption
